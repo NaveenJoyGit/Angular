@@ -1,0 +1,53 @@
+<app-header></app-header> 
+
+<body> 
+
+ 
+
+    <!------------End of header------------> 
+
+ 
+
+    <div> 
+
+        <h2 class="display-5">Movies</h2> 
+
+    </div> 
+
+    <div class="container"> 
+
+        <table class="table"> 
+
+            <tr> 
+
+                <th id="title">Title</th> 
+
+                <th id="box-office">Box Office</th> 
+
+                <th id="genre">Genre</th> 
+
+                <th id="has-teaser">Has Teaser</th> 
+
+            </tr> 
+
+            <tr *ngFor="let movie of movies"> 
+
+                <td><label for="title">{{movie.name}}</label></td> 
+
+                <td><label for="box-office">{{movie.boxOffice}}</label></td> 
+
+                <td><label for="genre">{{movie.genre}}</label></td> 
+
+                <td><label for="has-teaser">{{movie.hasTeaser}}</label></td> 
+
+            </tr> 
+
+        </table> 
+
+    </div> 
+
+ 
+
+ 
+
+</body> 

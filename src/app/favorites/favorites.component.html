@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary"> 
+
+    <div class="container-fluid"> 
+
+        <a class="navbar-brand" href="#">Movie Cruiser</a> 
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+
+            <span class="navbar-toggler-icon"></span> 
+
+        </button> 
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent"> 
+
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0"> 
+
+                <li class="nav-item"><a class="nav-link active" aria-current="page" 
+
+                        href="movie-list-customer">Movies</a></li> 
+
+                <li class="nav-item"><a class="nav-link active" href="favorites">Favorites</a></li> 
+
+                <li class="nav-item"></li> 
+
+                <li class="nav-item"><a class="nav-link active" href="#"><i class="bi bi-person-circle" 
+
+                            style="color:white; padding:1vh"></i></a></li> 
+
+                <li class="nav-item"><a class="nav-link active" href="movie-list">Logout</a></li> 
+
+            </ul> 
+
+        </div> 
+
+    </div> 
+
+</nav> 
+
+ 
+
+<div class="main-heading"> 
+
+    <p>Movies</p> 
+
+</div> 
+
+<div class="container"> 
+
+    <table class="table" id="favorite-table"> 
+
+        <tr> 
+
+            <th id="title">Title</th> 
+
+            <th id="box-office">Box Office</th> 
+
+            <th id="genre">Genre</th> 
+
+            <th id="action"></th> 
+
+        </tr> 
+
+        <tr *ngFor="let fav of favorites"> 
+
+            <td><label for="title">{{ fav.movies.name }}</label></td> 
+
+            <td><label for="genre">{{ fav.movies.genre }}</label></td> 
+
+            <td><label for="action"><button (click)="delete(fav.id)" 
+
+                        class="btn btn-danger">Delete</button></label></td> 
+
+        </tr> 
+
+    </table> 
+
+</div> 

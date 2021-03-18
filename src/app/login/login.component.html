@@ -1,0 +1,52 @@
+<app-header></app-header> 
+
+    <div class="container-fluid"> 
+
+        <p class="display-5">Login</p> 
+
+        <div class="container-fluid"> 
+
+            <form name="login-submit" id="form" (ngSubmit)="submit()" [formGroup]="formGroup"> 
+
+                <div id="login-error">Invalid Username/Password!</div> 
+
+                <div class="mb-3"> 
+
+                    <label for="username" id="username" class="form-label">Username</label> 
+
+                    <input type="text" id="username" name="username" placeholder="Enter Username" 
+                    class="form-control" formControlName="username"> 
+
+                </div> 
+
+                <div class="mb-3"> 
+
+                    <label for="pass-login" class="form-label">Password</label> 
+                    <input type="password" id="pass-login" 
+                        name="password" placeholder="Enter Username" class="form-control" formControlName="password"> 
+
+                </div> 
+
+ 
+
+                <div class="mb-3"> 
+
+                    <button type="submit" class="btn btn-primary mb-3">Login</button> 
+
+                    <p> 
+
+                        New here? <a href="signup">Sign up</a> 
+
+                    </p> 
+
+                    <p id="admin-login"> 
+
+                        Login as <a href="admin-login">Admin?</a> 
+
+                    </p> 
+
+                </div> 
+
+            </form> 
+
+        </div> 
